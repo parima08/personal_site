@@ -11,25 +11,17 @@
     <!-- <link href='http://fonts.googleapis.com/css?family=Dosis:200,300,600,700' rel='stylesheet' type='text/css'>
 
  -->
-    <link href='http://fonts.googleapis.com/css?family=Dosis:200,300,400,600,700' rel='stylesheet' type='text/css'>
 
     <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:300,200' rel='stylesheet' type='text/css'>
-
-    <link href='http://fonts.googleapis.com/css?family=Wire+One' rel='stylesheet' type='text/css'>
-
-    <link href='http://fonts.googleapis.com/css?family=Dosis:200,300,400|Quicksand:300,400|Oswald:400,300' rel='stylesheet' type='text/css'>
-
-    <link href='http://fonts.googleapis.com/css?family=Exo:100,200' rel='stylesheet' type='text/css'>
-
-    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,100italic' rel='stylesheet' type='text/css'>
 
 
     <link href="css/clean_page.css" rel="stylesheet">
     <script src="http://code.jquery.com/jquery-latest.min.js"
         type="text/javascript"></script>
-    <script src="js/textualizer.js"
-        type="text/javascript"></script>
-
+    <script src="js/textualizer.js" type="text/javascript"></script>
+    <script src = "js/flowtype.js"></script>
+    <script src = "js/velocity.js"></script>
+    <script src = "js/three.js"></script>
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -40,22 +32,34 @@
     <![endif]-->
   </head>
   <body>
+    <div class = "thick-border-lines">
+      <div class = "top-line thick-line"></div>
+      <div class = "right-line thick-line"></div>
+      <div class = "bottom-line thick-line"></div>
+      <div class = "left-line thick-line"></div>
+    </div>
+    <div class = "thin-border-lines">
+      <div class = "top-line thin-line"></div>
+      <div class = "right-line thin-line"></div>
+      <div class = "bottom-line thin-line"></div>
+      <div class = "left-line thin-line"></div>
+    </div>
     <div class = "main-container">
       <div class = "thick-border">
         <div class = "thin-border">
           <div class = "name-header">
-            <h1>Par<span class = "lc">i</span>ma Shah</h1>
+            <h1>MICRON AUTOMATA</h1>
           </div>
           <div class = "colored_box"></div>
           <div class = "grey_box"></div>
-        </div> 
+        </div>
       </div>
    </div>
-      <!-- <div class = "borders">
-        <div class = "border-top"></div>
-        <div class = "border-right"></div>
-        <div class = "border-bottom"></div>
-        <div class = "border-left"></div>
-      </div> -->
     </body>
+    <script>
+      // $('.name-header h1').flowtype();
+      $('thick-border-lines').velocity({
+
+      });
+    </script>
 </html>
