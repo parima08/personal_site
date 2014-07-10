@@ -1,0 +1,210 @@
+body{
+  font-family: 'Open Sans', sans-serif;
+  background-color: black
+}
+
+
+
+/*.name{
+  margin-right
+}*/
+
+.name h1{
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -6px;
+  font-size: 80px;
+  color: #6fd899;
+}
+
+.container-box{
+  /*background-image: -o-linear-gradient(44deg, #506D7D 0%, #94CCB9 28%, #C9DCB0 53%, #FFECA7 79%, #F7AD82 96%, #F28D6E 100%);
+  background-image: -moz-linear-gradient(44deg, #506D7D 0%, #94CCB9 28%, #C9DCB0 53%, #FFECA7 79%, #F7AD82 96%, #F28D6E 100%);
+  background-image: -ms-linear-gradient(44deg, #506D7D 0%, #94CCB9 28%, #C9DCB0 53%, #FFECA7 79%, #F7AD82 96%, #F28D6E 100%);
+  background-image: linear-gradient(134deg, #506D7D 0%, #94CCB9 28%, #C9DCB0 53%, #FFECA7 79%, #F7AD82 96%, #F28D6E 100%);*/
+}
+
+.borders{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  z-index: 1;
+}
+
+.border-top{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: white;
+  height: 1px;
+  width: 0px;
+  /*width: calc(100%-40px);*/
+  -webkit-animation: top_draw 2s;
+   -webkit-animation-fill-mode:forwards; /*Chrome 16+, Safari 4+*/
+   -moz-animation-fill-mode:forwards; /*FF 5+*/
+   -o-animation-fill-mode:forwards; /*Not implemented yet*/
+   -ms-animation-fill-mode:forwards; /*IE 10+*/
+   animation-fill-mode:forwards; /*when the spec is finished*/
+}
+
+.border-right{
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  background-color: white;
+  width: 1px;
+  height: 0px;
+  /*height: calc(100% - 40px);*/
+  -webkit-animation: side_draw 2s;
+   -webkit-animation-fill-mode:forwards; /*Chrome 16+, Safari 4+*/
+   -moz-animation-fill-mode:forwards; /*FF 5+*/
+   -o-animation-fill-mode:forwards; /*Not implemented yet*/
+   -ms-animation-fill-mode:forwards; /*IE 10+*/
+   animation-fill-mode:forwards; /*when the spec is finished*/
+}
+
+.border-bottom{
+  position: absolute;
+  bottom: 20px;
+  background-color: white;
+  height: 1px;
+  width: 0px;
+  /*width: calc(100% - 40px);*/
+   -webkit-animation: top_draw 2s;
+   -webkit-animation-fill-mode:forwards; /*Chrome 16+, Safari 4+*/
+   -moz-animation-fill-mode:forwards; /*FF 5+*/
+   -o-animation-fill-mode:forwards; /*Not implemented yet*/
+   -ms-animation-fill-mode:forwards; /*IE 10+*/
+   animation-fill-mode:forwards; /*when the spec is finished*/
+}
+
+.border-left{
+  position: absolute;
+  left: 20px;
+  background-color: white;
+  width: 1px;
+  height: 0px;
+  /*height: calc(100% - 40px);*/
+  -webkit-animation: side_draw 2s;
+   -webkit-animation-fill-mode:forwards; /*Chrome 16+, Safari 4+*/
+   -moz-animation-fill-mode:forwards; /*FF 5+*/
+   -o-animation-fill-mode:forwards; /*Not implemented yet*/
+   -ms-animation-fill-mode:forwards; /*IE 10+*/
+   animation-fill-mode:forwards; /*when the spec is finished*/
+}
+
+
+
+
+
+.container-box{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+}
+
+.container-border{
+  border: 3px solid #6fd899;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+}
+
+.grapes {
+  -webkit-animation: draw 5s infinite;
+}
+
+.name_svg_container{
+  margin-top: 200px;
+}
+
+.name_svg {
+ -webkit-animation: draw 3s;
+  -webkit-animation-delay: 1s;
+ -webkit-animation-fill-mode:forwards; /*Chrome 16+, Safari 4+*/
+   -moz-animation-fill-mode:forwards; /*FF 5+*/
+   -o-animation-fill-mode:forwards; /*Not implemented yet*/
+   -ms-animation-fill-mode:forwards; /*IE 10+*/
+   animation-fill-mode:forwards; /*when the spec is finished*/
+}
+
+
+.outline_name_svg{
+
+  -webkit-animation: draw 3s;
+  -webkit-animation-delay: 1s;
+ -webkit-animation-fill-mode:forwards; /*Chrome 16+, Safari 4+*/
+   -moz-animation-fill-mode:forwards; /*FF 5+*/
+   -o-animation-fill-mode:forwards; /*Not implemented yet*/
+   -ms-animation-fill-mode:forwards; /*IE 10+*/
+   animation-fill-mode:forwards; /*when the spec is finished*/
+
+}
+
+.below{
+  width: 100%;
+  height: 0px;
+  margin-top: -103px;
+  background-color: black;
+  -webkit-animation: box-color 3s;
+  -webkit-animation-delay: 2s;
+  -webkit-animation-fill-mode:forwards; /*Chrome 16+, Safari 4+*/
+   -moz-animation-fill-mode:forwards; /*FF 5+*/
+   -o-animation-fill-mode:forwards; /*Not implemented yet*/
+   -ms-animation-fill-mode:forwards; /*IE 10+*/
+   animation-fill-mode:forwards; /*when the spec is finished*/
+}
+
+@-webkit-keyframes box-color{
+  59%{
+    background-color: black;
+  }
+  60%{
+    height: 0px;
+    background-color: rgba(255, 255, 255, .3);
+  }
+  100%{
+    background-color: rgba(255, 255, 255, .3);
+    height:200px;
+  }
+}
+
+@-webkit-keyframes draw {
+  40%{
+    stroke:yellow;
+  }
+  90%{
+    fill: none;
+    stroke: white;
+  }
+  100%{
+    stroke-dashoffset: 0;
+    fill: rgba(255, 255, 255, .6);
+    stroke: white;
+    stroke: 0px;
+  }
+  /*40%{
+    fill: white;
+  }
+  80% {
+    stroke-dashoffset: 0;
+    fill: black;
+  }
+  90%{
+    fill: white;
+  }*/
+}
+
+@-webkit-keyframes top_draw{
+  100%{
+    width: calc(100% - 40px);
+  } 
+}
+
+@-webkit-keyframes side_draw{
+  100%{
+    height: calc(100% - 40px);
+  } 
+}

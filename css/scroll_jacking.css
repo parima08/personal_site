@@ -1,0 +1,156 @@
+#projects {
+	height:100%;
+}
+ 
+.slide {
+	position: absolute;
+	top:0;
+	left:0;
+	height: 0;							
+	width: 100%;
+ 
+  background: black;
+  overflow: hidden;
+  -webkit-transition: height 0.9s ease-in-out;
+   -moz-transition: height 0.9s ease-in-out;
+   -o-transition: height 0.9s ease-in-out;
+  transition: height 0.9s ease-in-out;
+	/*this would be vendor prefixed:*/
+ 	
+}
+/* #FD4B4B;*/
+.slide:nth-child(1) { z-index:10; background: #FD4B4B }
+.slide:nth-child(2) { z-index:9; background: green; }
+.slide:nth-child(3) { z-index:8; background: blue ; }
+ 
+.active.slide {
+	height: 100%;
+}
+
+.grey{
+	background-color: #DCDCDC;
+	height: 100%;
+}
+
+hr.short {
+  border-top: 2px dotted #fff;
+  /*color: #fff;
+  background-color: #fff;*/
+  height: 1px;
+  width: 60%;
+  margin-bottom: -10px;
+}
+
+hr.long {
+  border-top: 2px dotted #fff;
+  /*color: #fff;
+  background-color: #fff;*/
+  height: 1px;
+  width: 80%;
+  margin-bottom: -10px;
+}
+
+.home .container{
+	border: 5px solid white;
+	height: 100%;
+	opacity: 40%;
+	color: white;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.half{
+    width: 49%;
+    display: inline-block;
+    padding: 0px;
+    margin: 0px;
+}
+
+.stripe_half{
+    width: 100%;
+    z-index: 1;
+}
+
+.retro .white{
+    background-color: rgb(241,238,232);
+    padding: 40px;
+}
+
+.retro .pink{
+    background-color: rgba(220,72,85, .8);
+}
+
+.retro .gray{
+    /*background-color: rgb(93,81,98);*/
+    border-bottom: 600px solid rgba(93, 81, 98, .98);
+}
+
+.retro .orange{
+    background-color: rgba(246,113,89, .8);
+}
+
+.retro .blue{
+    background-color: rgba(171,203,191, .8) ;
+    width: 100%;
+}
+
+.stripe{
+/*    width: 50%;*/
+    height: 200px;
+/*    display: inline-block;*/
+}
+
+.box{
+/*    width: 50%;*/
+    /*height: 600px;*/
+    
+    border-right: 200px solid transparent;
+    height: 0;
+    width: 100%;
+    z-index: 200;
+    position: absolute;
+    width: 50%;
+    margin-top: 5px;
+/*    display: inline-block;*/
+}
+
+
+.blurred{
+    margin-top: 10px;
+    background: url('../images/bg3.jpg');
+    background-size: cover;
+    background-position: center bottom;
+    height: 600px;
+}
+
+.project_box{
+    background-color: rgba(255, 255, 255,.5);
+    margin-top: 40px;
+    height: 400px;
+}
+
+.flat .light_green{
+    background-color: #C0DE9F;
+}
+
+.flat .medium_green{
+    background-color: #79BD8F;
+}
+
+.flat .dark_green{
+    background-color: #00804F;
+}
+
+.flat .orange{
+    border-bottom: 600px solid #FBF29D;
+}
+
+
+.rustic .
+
+.shadow{
+  -moz-box-shadow:    3px 3px 3px 3px rgba(0, 0, 0, .1);
+  -webkit-box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, .1);
+  box-shadow:         3px 3px 3px 3px rgba(0, 0, 0, .1);
+  margin-bottom: 20px;
+}
