@@ -60,6 +60,7 @@
 	height: calc(100% - 10px);
 }
 
+
 /***************************************** */
 .thin-line{
 	position: absolute;
@@ -131,4 +132,20 @@
 	background-color: #4C4C4C;
 	width: 70%;
 	right: 40px;
+}
+
+.name-svg .name-text{
+	font-size: 13.3em;
+	font-weight: 100;
+	fill: rgba(0,0,0, 0);
+	stroke: black;
+	font-family: "Yanone Kaffeesatz";
+	stroke-width: .4;
+	letter-spacing: .35em;
+	stroke-dashoffset: 500;
+	stroke-dasharray: 500;
+}
+
+canvas{
+	visibility: none;
 }
