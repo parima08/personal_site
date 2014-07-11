@@ -71,28 +71,56 @@
 	top: calc(2em + 10px);
 	right: calc(2em + 10px);
 	height: 2px;
-	width: calc(100% - 5em - 6px);
+	/*width: calc(100% - 5em - 6px);*/
+	width: 0;
+	-webkit-animation: thin_top_draw 2s;
+   -webkit-animation-fill-mode:forwards; /*Chrome 16+, Safari 4+*/
+   -moz-animation-fill-mode:forwards; /*FF 5+*/
+   -o-animation-fill-mode:forwards; /*Not implemented yet*/
+   -ms-animation-fill-mode:forwards; /*IE 10+*/
+   animation-fill-mode:forwards; /*when the spec is finished*/
 }
 
 .thin-line.right-line{
 	top: calc(2em + 10px);
-	right: calc(2em + 10px);
+	left: calc(2em + 10px);
 	width: 2px;
-	height: calc(100% - 5em - 6px);
+	/*height: calc(100% - 5em - 6px);*/
+	height: 0;
+	-webkit-animation: thin_side_draw 2s;
+   -webkit-animation-fill-mode:forwards; /*Chrome 16+, Safari 4+*/
+   -moz-animation-fill-mode:forwards; /*FF 5+*/
+   -o-animation-fill-mode:forwards; /*Not implemented yet*/
+   -ms-animation-fill-mode:forwards; /*IE 10+*/
+   animation-fill-mode:forwards; /*when the spec is finished*/
 }
 
 .thin-line.bottom-line{
 	bottom: calc(2em + 10px);
 	left: calc(2em + 10px);
 	height: 2px;
-	width: calc(100% - 5em - 6px);
+	/*width: calc(100% - 5em - 6px);*/
+	width: 0;
+	-webkit-animation: thin_top_draw 2s;
+   -webkit-animation-fill-mode:forwards; /*Chrome 16+, Safari 4+*/
+   -moz-animation-fill-mode:forwards; /*FF 5+*/
+   -o-animation-fill-mode:forwards; /*Not implemented yet*/
+   -ms-animation-fill-mode:forwards; /*IE 10+*/
+   animation-fill-mode:forwards; /*when the spec is finished*/
 }
 
 .thin-line.left-line{
 	bottom: calc(2em + 10px);
-	left: calc(2em + 10px);
+	right: calc(2em + 10px);
 	width: 2px;
-	height: calc(100% - 5em - 6px);
+	/*height: calc(100% - 5em - 6px);*/
+	height: 0;
+	-webkit-animation: thin_side_draw 2s;
+   -webkit-animation-fill-mode:forwards; /*Chrome 16+, Safari 4+*/
+   -moz-animation-fill-mode:forwards; /*FF 5+*/
+   -o-animation-fill-mode:forwards; /*Not implemented yet*/
+   -ms-animation-fill-mode:forwards; /*IE 10+*/
+   animation-fill-mode:forwards; /*when the spec is finished*/
 }
 
 .name-header{
@@ -100,6 +128,7 @@
 	top: 31%;
 	/*top: 11em;*/
 	left: 23px;
+	width: 100%;
 }
 
 .name-header h1{
@@ -142,10 +171,59 @@
 	font-family: "Yanone Kaffeesatz";
 	stroke-width: .4;
 	letter-spacing: .35em;
-	stroke-dashoffset: 500;
-	stroke-dasharray: 500;
+	stroke-dashoffset: 450;
+	stroke-dasharray: 450;
+
+-webkit-animation: draw 3s;
+  -webkit-animation-delay: 1s;
+ -webkit-animation-fill-mode:forwards; /*Chrome 16+, Safari 4+*/
+   -moz-animation-fill-mode:forwards; /*FF 5+*/
+   -o-animation-fill-mode:forwards; /*Not implemented yet*/
+   -ms-animation-fill-mode:forwards; /*IE 10+*/
+   animation-fill-mode:forwards; /*when the spec is finished*/
 }
 
+
+
 canvas{
-	visibility: none;
+	width: 0px!important;
+	height: 0px!important;
+
+-webkit-animation: can-fade 3s;
+  -webkit-animation-delay: 1s;
+ -webkit-animation-fill-mode:forwards; /*Chrome 16+, Safari 4+*/
+   -moz-animation-fill-mode:forwards; /*FF 5+*/
+   -o-animation-fill-mode:forwards; /*Not implemented yet*/
+   -ms-animation-fill-mode:forwards; /*IE 10+*/
+   animation-fill-mode:forwards; /*when the spec is finished*/
 }
+
+@-webkit-keyframes can-fade{
+	100%{
+		width: 100%;
+		height: 100%;
+	}
+}
+
+@-webkit-keyframes draw {
+  95%{
+    stroke-dashoffset: 0;
+    fill:rgba(0, 0, 0, 0);
+  }
+  100%{
+  	fill: rgba(0, 0, 0, 1);
+  }
+}
+
+@-webkit-keyframes thin_top_draw{
+  100%{
+    width: calc(100% - 5em - 6px);
+  } 
+}
+
+@-webkit-keyframes thin_side_draw{
+  100%{
+    height: calc(100% - 5em - 6px);
+  } 
+}
+
