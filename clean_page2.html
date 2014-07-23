@@ -12,8 +12,11 @@
 
  -->
 
-    <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:300,200' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:200' rel='stylesheet' type='text/css'>
 
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200|Josefin+Sans:100|Source+Code+Pro:200|Yanone+Kaffeesatz:200,300|Roboto:100|Advent+Pro:100' rel='stylesheet' type='text/css'>
 
     <link href="css/clean_page.css" rel="stylesheet">
     <script src="http://code.jquery.com/jquery-latest.min.js"
@@ -22,8 +25,6 @@
     <script src = "js/flowtype.js"></script>
     <script src = "js/velocity.js"></script>
     <script src = "js/three.js"></script>
-    <script src = "js/bird.js"></script>
-    <script src = "js/boid.js"></script>
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -50,192 +51,28 @@
     <div class = "main-container">
       <div class = "thick-border">
         <div class = "thin-border">
-          <figure class = "name-header">
-           <svg class = "name-svg" xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0"width="100%" height="250px" fill = "rgba(255, 0, 0)">
-              <g>
-                   <text class = "name-text">
-                      <tspan x="0" y="175">PARIMA SHAH</tspan>
-                   </text>
-              </g>
-            </svg>
-            <!-- <h1>Parima Shah</h1> -->
-          </figure>
-          <div class = "colored_box"></div>
-          <div class = "grey_box"></div>
+          <div class = "home-page">
+            <figure class = "name-header">
+             <svg class = "name-svg" xmlns="http://www.w3.org/2000/svg" version="1.1" x="0" y="0"width="100%" height="250px" fill = "rgba(255, 0, 0)">
+                <g>
+                     <text class = "name-text">
+                        <tspan x="0" y="175">PARIMA S<tspan class = "letter-h">H</tspan>AH</tspan>
+                     </text>
+                </g>
+              </svg>
+            </figure>
+
+            <div class = "colored_box"></div>
+            <div class = "grey_box">
+              <ul>
+                <li>WORK</li>
+                <li>ABOUT</li>
+                <li>THOUGHTS</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
    </div>
-
-
-        <script>
-    // $(function(){
-    //   //$(".thin-border").velocity( { backgroundColorRed: 255 }, 1500);
-    //   $
-    //   $('.name-svg .name-text').velocity({
-    //         strokeDashoffset: '0px'
-    //       },{
-    //         duration: 2000
-    //     }).velocity({
-    //       fillRed: 0,
-    //       fillGreen: 0,
-    //       fillBlue: 0,
-    //     },{
-    //       duration: 1000
-    //     });
-    //     $('canvas').velocity({ opacity: 1 }).velocity( {display: block });
-    //   });
-    </script>
-    </body>
-
-
-    <script>
-    var mouseX = 0, mouseY = 0,
-
-      windowHalfX = window.innerWidth / 2,
-      windowHalfY = window.innerHeight / 2,
-
-      SEPARATION = 200,
-      AMOUNTX = 10,
-      AMOUNTY = 10,
-
-      camera, scene, renderer;
-
-      init();
-      animate();
-
-      function init() {
-
-        var container, separation = 100, amountX = 50, amountY = 50,
-        particles, particle;
-
-        container = document.createElement('div');
-        document.body.appendChild(container);
-
-        camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 1, 10000 );
-        camera.position.z = 100;
-
-        scene = new THREE.Scene();
-
-        renderer = new THREE.CanvasRenderer();
-        renderer.setClearColor( 0xffffff, 1);
-        renderer.setSize( window.innerWidth, window.innerHeight );
-        container.appendChild( renderer.domElement );
-
-        // particles
-
-        var PI2 = Math.PI * 2;
-        var material = new THREE.SpriteCanvasMaterial( {
-
-          color: 0x000000,
-          program: function ( context ) {
-
-            context.beginPath();
-            context.arc( 0, 0, 0.5, 0, PI2, true );
-            context.fill();
-
-          }
-
-        } );
-
-        var geometry = new THREE.Geometry();
-
-        for ( var i = 0; i < 100; i ++ ) {
-
-          particle = new THREE.Sprite( material );
-          particle.position.x = Math.random() * 2 - 1;
-          particle.position.y = Math.random() * 2 - 1;
-          particle.position.z = Math.random() * 2 - 1;
-          particle.position.normalize();
-          particle.position.multiplyScalar( Math.random() * 10 + 450 );
-          particle.scale.x = particle.scale.y = 10;
-          scene.add( particle );
-
-          geometry.vertices.push( particle.position );
-
-        }
-
-        // lines
-
-        var line = new THREE.Line( geometry, new THREE.LineBasicMaterial( { color: 0x000000, opacity: 0.5 } ) );
-        scene.add( line );
-
-        document.addEventListener( 'mousemove', onDocumentMouseMove, false );
-        document.addEventListener( 'touchstart', onDocumentTouchStart, false );
-        document.addEventListener( 'touchmove', onDocumentTouchMove, false );
-
-        //
-
-        window.addEventListener( 'resize', onWindowResize, false );
-
-      }
-
-      function onWindowResize() {
-
-        windowHalfX = window.innerWidth / 2;
-        windowHalfY = window.innerHeight / 2;
-
-        camera.aspect = window.innerWidth / window.innerHeight;
-        camera.updateProjectionMatrix();
-
-        renderer.setSize( window.innerWidth, window.innerHeight );
-
-      }
-
-      //
-
-      function onDocumentMouseMove(event) {
-
-        mouseX = event.clientX - windowHalfX;
-        mouseY = event.clientY - windowHalfY;
-
-      }
-
-      function onDocumentTouchStart( event ) {
-
-        if ( event.touches.length > 1 ) {
-
-          event.preventDefault();
-
-          mouseX = event.touches[ 0 ].pageX - windowHalfX;
-          mouseY = event.touches[ 0 ].pageY - windowHalfY;
-
-        }
-
-      }
-
-      function onDocumentTouchMove( event ) {
-
-        if ( event.touches.length == 1 ) {
-
-          event.preventDefault();
-
-          mouseX = event.touches[ 0 ].pageX - windowHalfX;
-          mouseY = event.touches[ 0 ].pageY - windowHalfY;
-
-        }
-
-      }
-
-      //
-
-      function animate() {
-
-        requestAnimationFrame( animate );
-
-        render();
-
-      }
-
-      function render() {
-
-        camera.position.x += ( mouseX - camera.position.x ) * .05;
-        camera.position.y += ( - mouseY + 200 - camera.position.y ) * .05;
-        camera.lookAt( scene.position );
-
-        renderer.render( scene, camera );
-
-      }
-    </script>
-
-
+  <script src = "js/background.js"></script>
 </html>

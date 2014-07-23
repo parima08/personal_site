@@ -20,16 +20,19 @@ body{
   /* Rectangle 5: */
   /* Rectangle 5: */
   /* Rectangle 9: */
-  background-image: -o-linear-gradient(44deg, #506D7D 0%, #94CCB9 28%, #C9DCB0 53%, #FFECA7 79%, #F7AD82 96%, #F28D6E 100%);
-  background-image: -moz-linear-gradient(44deg, #506D7D 0%, #94CCB9 28%, #C9DCB0 53%, #FFECA7 79%, #F7AD82 96%, #F28D6E 100%);
-  background-image: -ms-linear-gradient(44deg, #506D7D 0%, #94CCB9 28%, #C9DCB0 53%, #FFECA7 79%, #F7AD82 96%, #F28D6E 100%);
-  background-image: linear-gradient(134deg, #506D7D 0%, #94CCB9 28%, #C9DCB0 53%, #FFECA7 79%, #F7AD82 96%, #F28D6E 100%);
+  background: -o-linear-gradient(44deg, #506D7D 0%, #94CCB9 28%, #C9DCB0 53%, #FFECA7 79%, #F7AD82 96%, #F28D6E 100%);
+  background: -moz-linear-gradient(44deg, #506D7D 0%, #94CCB9 28%, #C9DCB0 53%, #FFECA7 79%, #F7AD82 96%, #F28D6E 100%);
+  background: -ms-linear-gradient(44deg, #506D7D 0%, #94CCB9 28%, #C9DCB0 53%, #FFECA7 79%, #F7AD82 96%, #F28D6E 100%);
+  background: linear-gradient(134deg, #506D7D 0%, #94CCB9 28%, #C9DCB0 53%, #FFECA7 79%, #F7AD82 96%, #F28D6E 100%);
   position: absolute;
+  z-index: -1;
   height: 100%;
   width: 100%;
 }
 
-
+canvas{
+  z-index: 100;
+}
 .logo{
   position: absolute;
   top: 50%;
